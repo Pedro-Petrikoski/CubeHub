@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    // font-family:'Courier New', Courier, monospace;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sidebar-body {
+
+    height: 100vh;
+}
+
+.sidebar-container {
+    position: fixed;
+    width: 10%;
+    height: 100%;
+}
+
+img {
+    margin-top: 5.5px;
+    width: 26px;
+    height: 26px;
+    filter: invert(100%);
+}
+
+.rotas:hover {
+    background-color: #0e5836;
+    cursor: pointer;
+}

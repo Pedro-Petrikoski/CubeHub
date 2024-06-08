@@ -1,0 +1,13 @@
+.main-container {
+    display: flex;
+    height: 100vh;
+  }
+
+  .content-container {
+    flex-grow: 1;
+  }
+
+  .body {
+    margin-left: 10%;
+    width: 90%;
+  }

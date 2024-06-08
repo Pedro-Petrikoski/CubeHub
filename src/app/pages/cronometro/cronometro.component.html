@@ -1,0 +1,36 @@
+<div [ngClass]="{ 'd-none': running }">
+  <div class="topnav bg-success-2 d-flex justify-content-between">
+    <div>
+      <select class="mx-2 categorias form-select" (change)="onSelect($event)">
+        <option selected>Escolha a categoria</option>
+        <option *ngFor="let categoria of categorias">
+          {{ categoria.nomeCategoria }}
+        </option>
+      </select>
+    </div>
+    <div
+      [innerHTML]="embaralhamento"
+      class="text-white text-center embaralhamento w-75"
+      [ngClass]="{ 'fs-5': isMegaminx, 'fs-4': !isMegaminx }"
+    >
+      {{ embaralhamento }}
+    </div>
+    <div>
+      <button
+        class="mx-2 botao btn btn-success"
+        (click)="mudarEmbaralhamento()"
+      >
+        Mudar Embaralhamento
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  *ngIf="nomeCategoria"
+  class="container-fluid d-flex flex-column justify-content-center align-items-center"
+>
+  <div class="display">
+    {{ formattedTime }}
+  </div>
+</div>
