@@ -1,12 +1,19 @@
 .topnav {
-    height: auto;
+  height: auto;
 }
 
-.categorias, .embaralhamento, .botao{
-    margin-top: 15px;
-    margin-bottom: 15px;
+.categorias,
+.embaralhamento,
+.botao {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.categorias,
+.botao {
+  width: 17.5%;
 }
 
 .display {
-    font-size: 100px;
+  font-size: 100px;
 }
