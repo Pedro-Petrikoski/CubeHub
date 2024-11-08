@@ -14,6 +14,24 @@
   width: 17.5%;
 }
 
+/* Estilo do display */
 .display {
   font-size: 100px;
+  text-align: center;
+}
+
+/* Posicionamento fixo para centralizar o conteúdo */
+.fixed-time {
+  position: fixed; /* Fixa o elemento na tela */
+  top: 40%; /* Centraliza verticalmente */
+  left: 40%; /* Centraliza horizontalmente */
+  // transform: translate(-50%, -50%); /* Ajusta para garantir o centro exato */
+  z-index: 10; /* Para garantir que o texto fique acima de outros elementos, se necessário */
+  pointer-events: none; /* Evita que o texto atrapalhe interações com outros elementos */
+}
+
+/* Garanta que a topnav não afete o layout centralizado do formattedTime */
+.topnav {
+  position: relative;
+  z-index: 5; /* Para que a topnav fique abaixo do texto fixo */
 }

@@ -16,18 +16,24 @@
       {{ embaralhamento }}
     </div>
     <div class="botao text-end">
-      <button class="mx-2 btn btn-success" (click)="mudarEmbaralhamento()">
+      <button
+        class="mx-2 btn btn-success"
+        (click)="mudarEmbaralhamento()"
+        [ngClass]="{ disabled: !nomeCategoria }"
+      >
         Mudar Scramble
       </button>
     </div>
   </div>
 </div>
 
+<!-- O display ficará fixo no centro da tela -->
 <div
   *ngIf="nomeCategoria"
-  class="container-fluid d-flex flex-column justify-content-center align-items-center"
+  class="container-fluid d-flex justify-content-center align-items-center"
+  style="position: relative"
 >
-  <div class="display">
+  <div class="display fixed-time">
     {{ formattedTime }}
   </div>
 </div>
