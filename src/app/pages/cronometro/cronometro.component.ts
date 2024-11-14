@@ -1,6 +1,8 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { categoriasArray } from './array-categorias/array-categorias';
 import { CategoriasInterface } from './array-categorias/array-categorias.interface';
+import TemposInterface from '../../shared/interface/tempos-interface';
+import { TemposMock } from '../../shared/mock/tempos-mock';
 
 @Component({
   selector: 'app-cronometro',
@@ -101,6 +103,16 @@ export class CronometroComponent implements OnInit, OnDestroy {
     if (this.running) {
       clearInterval(this.intervalId);
       this.running = false;
+
+      const data = new Date();
+      const obj: TemposInterface = {
+        categoria: this.nomeCategoria,
+        data: data,
+        tempo: this.formattedTime,
+      };
+
+      TemposMock.push(obj);
+      console.log(TemposMock);
     }
   }
 
